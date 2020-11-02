@@ -4,17 +4,17 @@ import javax.swing.*;
 
 
   public class Counter implements ActionListener {
-  JLable leftLable;
-  JLable rightLable;
+  JLabel leftlabel;
+  JLabel rightlabel;
   int leftCount;
   int rightCount;
 
   Counter(){
-    Jframe frame = new Jframe ("Lets Count");
+    JFrame frame = new JFrame ("Lets Count");
     frame.setLayout(new FlowLayout());
     frame.setSize(200,110);
-    JButton left = new JButton("left");
-	  JButton right = new JButton("right");
+    JButton left = new JButton("Left");
+	  JButton right = new JButton("Right");
 
     leftCount = 0;
     rightCount = 0;
@@ -25,11 +25,11 @@ import javax.swing.*;
     frame.add(left);
     frame.add(right);
 
-    leftLabel = new JLabel("Count" + leftCount);
-    rightLable = new JLabel("Count" + rightCount);
+    leftlabel = new JLabel("Count " + leftCount);
+    rightlabel = new JLabel("Count " + rightCount);
 
-    frame.add(leftLable);
-    frame.add(rightLable);
+    frame.add(leftlabel);
+    frame.add(rightlabel);
 
     JButton reset = new JButton("Reset");
     reset.addActionListener(this);
@@ -41,14 +41,15 @@ import javax.swing.*;
   }
 
   public void actionPerformed(ActionEvent ae) {
-    if(ae.getActionCommand().equals("left")) {
-      leftCount = leftCount++;
+    if(ae.getActionCommand().equals("Left")) {
+      leftCount = leftCount + 1;
     }
-    else if(ae.getActionCommand().equals("right")) {
-      rightCount = rightCount++;
+    else if(ae.getActionCommand().equals("Right")) {
+      rightCount = rightCount + 1;
     }
     else if(ae.getActionCommand().equals("reset")) {
-      leftCount = 0;
+      leftCount = 5;
       rightCount = 0;
   }
 }
+  }
