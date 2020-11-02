@@ -1,10 +1,11 @@
-import javax.swing.*;
-import java.awt.event.*;
 import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
 
   public class Counter implements ActionListener {
-  Jlable leftLable;
-  Jlable rightLable;
+  JLable leftLable;
+  JLable rightLable;
   int leftCount;
   int rightCount;
 
@@ -39,7 +40,7 @@ import java.awt.*;
 
   }
 
-  public void actionPerformed (ActionEvent ae); {
+  public void actionPerformed(ActionEvent ae) {
     if(ae.getActionCommand().equals("left")) {
       leftCount = leftCount++;
     }
