@@ -43,13 +43,17 @@ import javax.swing.*;
   public void actionPerformed(ActionEvent ae) {
     if(ae.getActionCommand().equals("Left")) {
       leftCount = leftCount + 1;
+      leftlabel.setText("Count " + leftCount);
     }
-    else if(ae.getActionCommand().equals("Right")) {
+    if(ae.getActionCommand().equals("Right")) {
       rightCount = rightCount + 1;
+      rightlabel.setText("Count " + rightCount);
     }
-    else if(ae.getActionCommand().equals("reset")) {
-      leftCount = 5;
+    if(ae.getActionCommand().equals("Reset")) {
+      leftCount = 0;
       rightCount = 0;
+      leftlabel.setText("Count " + leftCount);
+      rightlabel.setText("Count " + rightCount);
   }
 }
   }
